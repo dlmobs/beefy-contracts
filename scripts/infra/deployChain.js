@@ -10,16 +10,16 @@ const ethers = hardhat.ethers;
 const TIMELOCK_ADMIN_ROLE = "0x5f58e3a2316349923ce3780f8d587db2d72378aed66a8261c916544fa6846ca5";
 const STRAT_OWNER_DELAY = 21600;
 const VAULT_OWNER_DELAY = 0;
-const TRUSTED_EOA = "0x3Eb7fB70C03eC4AEEC97C6C6C1B59B014600b7F7";
-const KEEPER = "0x10aee6B5594942433e7Fc2783598c979B030eF3D";
-const chainName = "aurora";
+const TRUSTED_EOA = "0x2C39aaf7d04CB63eeb7df6FDf33d98265C18322A";
+const KEEPER = "0x2C39aaf7d04CB63eeb7df6FDf33d98265C18322A";
+const chainName = "boba";
 
 const config = {
   bifi: null, // addressBook[chainName].tokens.BIFI.address,
-  wnative: addressBook[chainName].tokens.WNATIVE.address,
-  rpc: "https://mainnet.aurora.dev/Fon6fPMs5rCdJc4mxX4kiSK1vsKdzc3D8k6UF8aruek",
-  chainName: "aurora",
-  chainId: 1313161554,
+  wnative: "0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000",
+  rpc: "https://mainnet.boba.network/",
+  chainName: "boba",
+  chainId: 288,
   devMultisig: null,
   treasuryMultisig: null,
   multicall: null,
@@ -42,7 +42,7 @@ async function main() {
   const deployer = await ethers.getSigner();
 
   const TimelockController = await ethers.getContractFactory("TimelockController");
-
+/*
   console.log("Checking if should deploy vault owner...");
   if (!config.vaultOwner) {
     console.log("Deploying vault owner.");
@@ -88,7 +88,7 @@ async function main() {
   } else {
     console.log(`There is already a multicall contract deployed at ${config.multicall}. Skipping.`);
   }
-
+*/
   console.log("Checking if it should deploy a Beefy reward pool...");
   if (!config.rewardPool && config.wnative && config.bifi) {
     console.log("Deploying reward pool.");
@@ -99,7 +99,7 @@ async function main() {
   } else {
     console.log("Skipping the beefy reward pool for now.");
   }
-
+/*
   console.log("Checking if it should deploy a fee batcher...");
   if (config.wnative && config.bifi) {
     console.log("Deploying fee batcher.");
@@ -125,7 +125,7 @@ async function main() {
     await rewardPool.transferOwnership(batcher.address);
   } else {
     console.log("Shouldn't deploy a fee batcher as some of the required elements are missing.");
-  }
+  }*/
 }
 
 main()

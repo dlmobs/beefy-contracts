@@ -8,12 +8,12 @@ import { BeefyChain } from "../../utils/beefyChain";
 const registerSubsidy = require("../../utils/registerSubsidy");
 
 const {
-  platforms: { vvs, beefyfinance },
+  platforms: { oolong, beefyfinance },
   tokens: {
-    BIFI: { address: BIFI },
-    WCRO: { address: WCRO },
+    OLO: { address: OLO },
+    WETH: { address: WETH },
   },
-} = addressBook.cronos;
+} = addressBook.boba;
 
 const shouldVerifyOnEtherscan = false;
 

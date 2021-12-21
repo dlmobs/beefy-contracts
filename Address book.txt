@@ -1,0 +1,8 @@
+Vault owner deployed to 0xc5285f0571dC230000cD9A0F94560E95c6eDAC02
+Strategy owner deployed to 0xa5Ed6971605967333054413660C5160dDE96cdb6
+Treasury deployed to 0x864d126753f90B4F4f687DDcC9a4eFE6D04d31d4
+Multicall deployed to 0xB3B928328d4aBF89E3444A4ae9e11CAFd61422Bd
+multisig dev 0x2C39aaf7d04CB63eeb7df6FDf33d98265C18322A
+TransparentUpgradableProxy: 0xE19598762451A672b638fB79B3cF0911db15B322
+Implementation address (BeefyVaultRegistry): 0xE8C337e38eE315176Dd86511be5d1E7905122E33
+Deployed to: 0xE7204F302c608668C3A8a72099f11c4e44D4335E (time lock address)

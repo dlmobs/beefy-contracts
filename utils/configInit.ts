@@ -14,7 +14,12 @@ export const getPKs = () => {
   if (process.env.KEEPER_PK) keeperAccount = process.env.KEEPER_PK;
   if (process.env.UPGRADER_PK) upgraderAccount = process.env.UPGRADER_PK;
   if (process.env.REWARDER_PK) rewarderAccount = process.env.REWARDER_PK;
-
+/*
+DEPLOYER_PK=
+KEEPER_PK=
+UPGRADER_PK=
+REWARDER_PK=
+*/
   const accounts = [deployerAccount, keeperAccount, upgraderAccount, rewarderAccount].filter(pk => !!pk) as string[];
   return accounts;
 };

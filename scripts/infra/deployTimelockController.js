@@ -3,9 +3,10 @@ const hardhat = require("hardhat");
 const ethers = hardhat.ethers;
 
 const config = {
-  minDelay: 86400,
-  proposers: ["0x3Eb7fB70C03eC4AEEC97C6C6C1B59B014600b7F7"],
-  executors: ["0x3Eb7fB70C03eC4AEEC97C6C6C1B59B014600b7F7", "0x10aee6B5594942433e7Fc2783598c979B030eF3D"],
+  minDelay: 1,
+  // 
+  proposers: ["0x2C39aaf7d04CB63eeb7df6FDf33d98265C18322A"],
+  executors: ["0x2C39aaf7d04CB63eeb7df6FDf33d98265C18322A", "0x2C39aaf7d04CB63eeb7df6FDf33d98265C18322A"],
 };
 
 async function main() {

@@ -47,6 +47,11 @@ const config: DeploymentConfig = {
       chainId: 250,
       accounts,
     },
+    boba: {
+      url: "https://mainnet.boba.network/",
+      chainId: 288,
+      accounts,
+    },
     one: {
       url: "https://api.s0.t.hmny.io/",
       chainId: 1666600000,
